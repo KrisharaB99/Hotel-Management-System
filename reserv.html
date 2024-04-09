@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<head>
+    <title>CK_HOUSE</title>
+    <link rel="shortcut icon"
+    href="images/fav.png">
+    <link rel="stylesheet"href="style.css">
+   
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+              <a href="index.html"><h2 class="logo">CK_HOUSE</h2></a>
+                </div>
+
+             <div class="menu">  
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About_us</a></li>
+                    <li><a href="#">Reservation</a></li>
+                    <li><a href="contact.html">Contact_us</a></li>
+                    <li><a href="retrive.php">Bookings</a></li>
+                </ul>
+             </div>
+            
+
+            <br>
+            <br>
+           <br>
+          <br>
+<div class="slideshow-container">
+  <br>
+  <h2 class="blink"><b>Hurry up!</b> <i><strong>  25% off</strong> </i> for all the <strong>CK_HOUSE</strong> Members.</h2> 
+  <br>
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/2.jpg" style="width:100%">
+  <div class="text">Single</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/3.jpg" style="width:100%">
+  <div class="text">King type</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/4.jpg" style="width:100%">
+  <div class="text">Queen type</div>
+</div>
+
+
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+<!----------------form-------------------->
+
+<div class="container">
+  <form action="reserv.php" method="post">
+    <div class="row">
+      <h4>Full Name</h4>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Full Name" name="name"/>
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <h4>NIC No</h4>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="751486248V/X" name="nic"/>
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <label for="rooms"><h4>Room Type</h4></label>
+            <select name="rooms" id="rooms">
+              <option value="Single Type" id="single">Single</option>
+              <option value="King Type" id="king">King Type</option>
+              <option value="Single Type" id="queen">Queen Type</option>
+            </select>
+      </div>
+      <div class="input-group input-group-icon">
+        <label for="arrival"><h4>Date of Arrival:</h4></label>
+        <input type="date" id="arr" name="arr">
+      </div>
+      <div class="input-group input-group-icon">
+        <label for="departure"><h4>Date of Departure:</h4></label>
+        <input type="date" id="dep" name="dep">
+      </div>
+    
+      
+    <div class="row">
+      <h4>Terms and Conditions</h4>
+      <div class="input-group">
+        <input id="terms" type="checkbox"/>
+        <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
+      </div>
+      <button class="btn"input type="submit"><strong>Book</strong></button>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+
+</div>
+
+
+ <!-------------------------------------Footer-------------------------------->
+ <footer>
+  <nav style="margin-top: 1.5rem;">
+      <a>&copy 2023, All Rights Reserved, CK_HOUSE</a> | <a href="contact.html" style="color: aliceblue;">Join with Us.</a>
+      <h2>Contact us on,</h2>
+
+<!-- Add font awesome icons -->
+<a href="https://web.facebook.com/?_rdc=1&_rdr" class="fa fa-facebook"></a>
+<a href="https://twitter.com/i/flow/login" class="fa fa-twitter"></a>
+<a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+<a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+
+  </nav>
+</footer>
+            
+   
+</body>
+</html>
